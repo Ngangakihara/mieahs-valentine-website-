@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine ❤️</title>
+  <style>
+    body {
+      background: pink;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #noBtn {
+      background-color: #ff6b6b;
+      color: white;
+    }
+    #yesBtn {
+      background-color: #4caf50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1 id="question">Will you be my Valentine? 💖</h1>
+    <button id="yesBtn" onclick="yesClicked()">YEEEEEES😘 </button>
+    <button id="noBtn" onclick="noClicked()">NO 😒</button>
+  </div>
+
+  <script>
+    let noCount = 0;
+    const messages = [
+      "Are you sure? 🥺",
+      "pweaasee? 😝",
+      "Think again babyyyyy 😭",
+      "One last chaaancee 💔",
+      "Okay, but we'd look so cute together Mieah 💕"
+    ];
+
+    function noClicked() {
+      if (noCount < messages.length) {
+        document.getElementById("question").innerText = messages[noCount];
+        noCount++;
+      } else {
+        document.getElementById("question").innerText = "Okay… I still choose you ❤️";
+      }
+    }
+
+    function yesClicked() {
+      document.body.innerHTML = "<h1>YAY!! 💘🥰 See you on Valentine’s ❤️</h1>";
+    }
+  </script>
+
+</body>
+</html>
